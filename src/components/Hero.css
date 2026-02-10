@@ -1,0 +1,132 @@
+.hero {
+  /* Fill (almost) the full viewport so only hero is visible on load */
+  min-height: calc(100vh - var(--space-lg) - var(--space-2xl));
+  display: flex;
+  align-items: center;
+  padding-top: var(--space-xl);
+  padding-bottom: var(--space-xl);
+}
+
+.hero__inner {
+  max-width: var(--content-width);
+  display: flex;
+  align-items: center;
+  gap: var(--space-xl);
+}
+
+.hero__photo-wrap {
+  flex-shrink: 0;
+  width: 300px;
+  height: 300px;
+  border-radius:50%;
+  overflow: hidden;
+  border: 0px solid var(--accent);
+  background: var(--bg-muted);
+  box-shadow: 0 0 0 1px var(--border), 0 4px 12px var(--accent-soft);
+}
+
+.hero__photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hero__text {
+  min-width: 0;
+}
+
+.hero__name {
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  margin: 0 0 var(--space-sm);
+  /* Subtle accent gradient for name text */
+  background: linear-gradient(90deg, var(--accent), var(--text));
+  -webkit-background-clip: text;
+  color: transparent;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 0.5px solid var(--accent);
+  padding-right: 10px;
+  /* Typewriter effect for name on initial load; cursor blinks indefinitely */
+  animation:
+    heroType 2.4s steps(22, end) 0.3s both,
+    heroCaret 0.8s step-end infinite 2.7s;
+    font-weight: 300;
+}
+
+.hero__role {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  /* Same gradient as hero name */
+  background: linear-gradient(90deg, var(--accent), var(--text));
+  -webkit-background-clip: text;
+  color: transparent;
+  margin: 0 0 var(--space-sm);
+  animation: heroFade 0.6s var(--ease-out) 0.24s both;
+}
+
+.hero__tagline {
+  font-size: var(--text-base);
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-md);
+  animation: heroFade 0.6s var(--ease-out) 0.08s both;
+  max-width: 40ch;
+  font-weight: 300;
+}
+
+.hero__summary {
+  font-size: var(--text-base);
+  line-height: 1.65;
+  color: var(--text-secondary);
+  margin: 0;
+  max-width: 40ch;
+  animation: heroFade 0.6s var(--ease-out) 0.16s both;
+  font-weight: 100;
+}
+
+@media (max-width: 640px) {
+  .hero__inner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero__summary {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@keyframes heroFade {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroType {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes heroCaret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: var(--accent);
+  }
+}
+

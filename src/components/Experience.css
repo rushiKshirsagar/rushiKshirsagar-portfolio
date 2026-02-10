@@ -1,0 +1,54 @@
+.experience__list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.experience__job {
+  padding: var(--space-md) 0 var(--space-md) var(--space-md);
+  border-bottom: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+}
+
+.experience__job:last-child {
+  border-bottom: none;
+}
+
+.experience__job:nth-child(1) { border-left-color: var(--accent); }
+.experience__job:nth-child(2) { border-left-color: var(--teal); }
+.experience__job:nth-child(3) { border-left-color: var(--coral); }
+.experience__job:nth-child(4) { border-left-color: var(--amber); }
+.experience__job:nth-child(5) { border-left-color: var(--violet); }
+
+.experience__header {
+  margin-bottom: var(--space-sm);
+}
+
+.experience__role {
+  font-size: var(--text-lg);
+  font-weight: 600;
+  margin: 0 0 var(--space-xs);
+  color: var(--text);
+}
+
+.experience__meta {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.experience__points {
+  margin: 0;
+  padding-left: 1.25rem;
+  color: var(--text-secondary);
+  font-size: var(--text-sm);
+  line-height: 1.6;
+}
+
+.experience__points li {
+  margin-bottom: var(--space-xs);
+}
+
+.experience__points li:last-child {
+  margin-bottom: 0;
+}

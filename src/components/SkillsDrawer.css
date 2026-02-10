@@ -1,0 +1,96 @@
+.skills-drawer {
+  position: fixed;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 260px;
+  padding: var(--space-lg) var(--space-lg) var(--space-2xl);
+  border-left: 1px solid var(--border);
+  background: transparent;
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  z-index: 9;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  transform: translateX(100%);
+  opacity: 0;
+  transition:
+    transform 0.4s var(--ease-out),
+    opacity 0.4s var(--ease-out);
+}
+
+.skills-drawer--visible {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.skills-drawer__inner {
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.skills-drawer__title {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin: 0 0 var(--space-md);
+}
+
+.skills-drawer__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.skills-drawer__item {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.skills-drawer__label {
+  font-size: var(--text-sm);
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.skills-drawer__bar {
+  height: 2px;
+  border-radius: 999px;
+  background: var(--bg-muted);
+  overflow: hidden;
+}
+
+.skills-drawer__fill {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skills-drawer__item--1 .skills-drawer__fill {
+  background: linear-gradient(90deg, var(--accent), var(--accent-soft));
+}
+.skills-drawer__item--2 .skills-drawer__fill {
+  background: linear-gradient(90deg, var(--coral), var(--coral-soft));
+}
+.skills-drawer__item--3 .skills-drawer__fill {
+  background: linear-gradient(90deg, var(--teal), var(--teal-soft));
+}
+.skills-drawer__item--4 .skills-drawer__fill {
+  background: linear-gradient(90deg, var(--amber), var(--amber-soft));
+}
+
+@media (max-width: 768px) {
+  .skills-drawer {
+    display: none;
+  }
+}
+

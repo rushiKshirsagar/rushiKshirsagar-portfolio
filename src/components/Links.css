@@ -1,0 +1,24 @@
+.links__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.links__link {
+  font-size: var(--text-base);
+  font-weight: 500;
+  color: var(--accent);
+  text-decoration: none;
+  padding: var(--space-sm) 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--ease-out);
+}
+
+.links__link:hover {
+  border-bottom-color: var(--accent);
+}
+
+.links__link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}

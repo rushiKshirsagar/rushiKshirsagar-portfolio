@@ -1,0 +1,63 @@
+.education__list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.education__item {
+  flex: 1 1 220px;
+  padding: var(--space-md);
+  border-left: 3px solid var(--teal);
+  margin-left: 0;
+  min-width: 0;
+}
+
+.education__degree {
+  font-size: var(--text-base);
+  font-weight: 600;
+  margin: 0 0 var(--space-xs);
+  color: var(--text);
+}
+
+.education__meta {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+.education__courses {
+  margin-top: var(--space-md);
+}
+
+.education__courses-title {
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-secondary);
+  margin: 0 0 var(--space-xxs);
+}
+
+.education__courses-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.education__pill {
+  font-size: var(--text-xs);
+  padding: 0.2rem 0.7rem;
+  margin-top: 0.30rem;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.12);
+  color: var(--text-secondary);
+  border: 1px solid rgba(148, 163, 184, 0.35);
+  white-space: nowrap;
+}
+
+.education__note {
+  font-size: var(--text-sm);
+  color: var(--text-secondary);
+  margin: var(--space-xs) 0 0;
+  font-style: italic;
+}
