@@ -26,11 +26,3 @@ Output is in `dist/`. To test the production build locally:
 ```bash
 npm run build && npm start
 ```
-
-## Deploy to Heroku
-
-1. Create an app: `heroku create your-app-name`
-2. Push: `git push heroku main`
-3. Heroku runs `npm install`, then `heroku-postbuild` (i.e. `npm run build`), then `npm start` (serves `dist/` via Express).
-
-Ensure the app has a `Procfile` (included) and that `package.json` has `"start": "node server.cjs"` and `"heroku-postbuild": "npm run build"`.
