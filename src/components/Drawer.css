@@ -110,6 +110,9 @@
     border-right: none;
     border-bottom: 1px solid var(--border);
     padding: var(--space-md) var(--space-lg);
+    background: rgba(10, 16, 25, 0.95);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
   }
 
   .drawer__nav {
