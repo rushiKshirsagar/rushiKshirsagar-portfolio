@@ -1,10 +1,21 @@
+import { useEffect, useRef, useState } from 'react'
 import { skills } from '../data/content'
 import './SkillsDrawer.css'
 
 export default function SkillsDrawer({ isVisible }) {
+  const hasAnimated = useRef(false)
+  const [runAnimation, setRunAnimation] = useState(false)
+
+  useEffect(() => {
+    if (isVisible && !hasAnimated.current) {
+      hasAnimated.current = true
+      setRunAnimation(true)
+    }
+  }, [isVisible])
+
   return (
     <aside
-      className={`skills-drawer ${isVisible ? 'skills-drawer--visible' : ''}`}
+      className={`skills-drawer ${isVisible ? 'skills-drawer--visible' : ''} ${runAnimation ? 'skills-drawer--animated' : ''}`}
       aria-label="Skills"
     >
       <div className="skills-drawer__inner">

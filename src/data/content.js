@@ -49,7 +49,7 @@ export const experience = [
 
 export const projects = [
   {
-    name: 'QuickScoop (IOS App)',
+    name: 'QuickScoop (iOS)',
     description: 'Stay informed without the information overload. Get AI-powered, bite-sized news summaries with the full story just a swipe away.',
     tech: ['React Native', 'MongoDB', 'Heroku', 'AWS'],
     liveUrl: 'https://apps.apple.com/us/app/quickscoop/id6502798126',
@@ -65,9 +65,10 @@ export const projects = [
   {
     name: 'smart-api-throttle (npm)',
     description: 'A flexible, hook-based API rate limiter for frontend apps, featuring multiple throttling strategies and a universal async wrapper.',
-    tech: ['React', 'Node'],
+    tech: ['React', 'Node', 'Vite'],
     liveUrl: 'https://www.npmjs.com/package/smart-api-throttle',
     repoUrl: 'https://github.com/rushiKshirsagar/smart-api-throttle',
+    npmDownloads: "1000+",
   },
   {
     name: 'jsx-tsx-highlight-util (npm)',
@@ -75,15 +76,34 @@ export const projects = [
     tech: ['Javascript', 'React', 'Vite'],
     liveUrl: 'https://www.npmjs.com/package/jsx-tsx-highlight-util',
     repoUrl: 'https://github.com/rushiKshirsagar/jsx-tsx-highlight-util',
+    npmDownloads: "600+",
   },
   {
     name: 'P2P marketplace',
     description: "A niche commerce platform dedicated to 'one-of-a-pair' items. Turn your lonely accessories into a complete set through a community-driven marketplace.",
-    tech: ['Javascript', 'React', 'Vite', 'Railway'],
+    tech: ['Javascript', 'SQLlite','React', 'Vite', 'Railway'],
     liveUrl: 'http://oddoneout.biz/',
     repoUrl: 'https://github.com/rushiKshirsagar/odd-one-out',
+    
+  },
+  {
+    name: 'js-console-error-interceptor (npm)',
+    description: "A real-time debugging companion that intercepts browser console errors and injects AI-generated solutions directly into the dev tools for instant troubleshooting.",
+    tech: ['Node','OpenAI','Express'],
+    liveUrl: 'https://www.npmjs.com/package/@waba/js-console-error-interceptor',
+    repoUrl: 'https://github.com/rushiKshirsagar/Js-Console-Error-Interceptor',
+    npmDownloads: "1200+",
+  },
+  {
+    name: 'Public API Collection',
+    description: "A collection of robust, publicly available APIs hosted on RapidAPI, providing developers with ready-to-use endpoints for specialized data processing and integration.",
+    tech: ['Node','Express', 'MongoDB'],
+    liveUrl: 'https://rapidapi.com/user/rushiKshirsagar',
+    repoUrl: '',
+    apiHits: '3000+',
   },
 ]
+
 
 export const education = [
   {
@@ -121,8 +141,8 @@ export const skills = [
   { name: 'TypeScript', level: 92 },
   { name: 'React', level: 90 },
   { name: 'Node.js', level: 85 },
-  { name: 'Java', level: 90 },
-  { name: 'Spring Boot', level: 80 },
+  { name: 'Java', level: 70 },
+  { name: 'Spring Boot', level: 60 },
   { name: 'REST APIs', level: 80 },
   { name: 'Azure', level: 40 },
   { name: 'Cosmos DB', level: 80 },
