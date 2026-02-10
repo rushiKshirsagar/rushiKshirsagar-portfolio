@@ -8,7 +8,7 @@ export default function Hero() {
       <div className="hero__inner">
         {site.photo && (
           <div className="hero__photo-wrap">
-            <img src={site.photo} alt="" className="hero__photo" />
+            <img src={`${import.meta.env.BASE_URL}${site.photo.replace(/^\//, '')}`} alt="" className="hero__photo" />
           </div>
         )}
         <div className="hero__text">
